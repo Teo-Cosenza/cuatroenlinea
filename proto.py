@@ -28,5 +28,5 @@ def drawBoard(board):
             else:
                 print(' %s ' % cell, end='')
 
-sequence = [1, 2, 3, 1, 4, 1, 3]
+sequence = [1, 2, 3, 1, 4]
 drawBoard(completeBoardInOrder(sequence, emptyBoard))
