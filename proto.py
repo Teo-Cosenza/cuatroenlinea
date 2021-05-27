@@ -17,7 +17,7 @@ def completeBoardInOrder(sequence, board):
 def dropTokenInColumn(token, column, board):
     for row in range (6, 0, -1):
         if board[row - 1][column - 1] == 0:
-            board[row - 1][column - 1] == token
+            board[row - 1][column - 1] = token
             return
 
 def drawBoard(board):
@@ -27,6 +27,7 @@ def drawBoard(board):
                 print('  ', end='')
             else:
                 print(' %s ' % cell, end='')
+        print('')
 
-sequence = [1, 2, 3, 1, 4]
-drawBoard(completeBoardInOrder(sequence, emptyBoard))
+sequence = [1, 2, 3, 1]
+drawBoard(completeBoardInOrder(sequence, emptyBoard()))
