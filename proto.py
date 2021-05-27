@@ -29,5 +29,15 @@ def drawBoard(board):
                 print(' %s ' % cell, end='')
         print('')
 
+def validSequence(sequence):
+    for column in sequence:
+        if column < 1 or column > 7:
+            return False
+    return True
+
 sequence = [1, 2, 3, 1]
-drawBoard(completeBoardInOrder(sequence, emptyBoard()))
+
+if validSequence(sequence):
+    drawBoard(completeBoardInOrder(sequence, emptyBoard()))
+else:
+    print("Columns must be between 1 and 7")
