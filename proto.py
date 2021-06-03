@@ -8,6 +8,14 @@ def emptyBoard():
         [0, 0, 0, 0, 0, 0, 0],
     ]
 
+def columnContent(columnNumber, board):
+    column = []
+    for row in board:
+        cell = row[columnNumber - 1]
+        column.append(cell)
+    return column
+
+
 def completeBoardInOrder(sequence, board): 
     for i, column in enumerate(sequence):
         tokenNumber = 1 + (i % 2)
