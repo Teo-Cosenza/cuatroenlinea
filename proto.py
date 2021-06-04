@@ -44,8 +44,11 @@ def validSequence(sequence):
     return True
 
 sequence = [1, 2, 3, 1]
-
+board = []
 if validSequence(sequence):
-    drawBoard(completeBoardInOrder(sequence, emptyBoard()))
+    board = completeBoardInOrder(sequence, emptyBoard())
+    #drawBoard(board)
 else:
-    print("Columns must be between 1 and 7")
+    print("Columns must be between 1 and 7") 
+
+print(columnContent(1, board))
