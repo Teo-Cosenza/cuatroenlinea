@@ -15,6 +15,9 @@ def columnContent(columnNumber, board):
         column.append(cell)
     return column
 
+def rowContent(rowNumber, board):
+    row = board[6 - rowNumber]
+    return row
 
 def completeBoardInOrder(sequence, board): 
     for i, column in enumerate(sequence):
@@ -43,12 +46,15 @@ def validSequence(sequence):
             return False
     return True
 
-sequence = [1, 2, 3, 1]
+sequence = [1, 2, 3, 1, 4, 5, 1, 2, 3, 4, 2, 2, 1]
 board = []
 if validSequence(sequence):
     board = completeBoardInOrder(sequence, emptyBoard())
-    #drawBoard(board)
+    drawBoard(board)
 else:
     print("Columns must be between 1 and 7") 
 
-print(columnContent(1, board))
+print('\n')
+print(columnContent(2, board))
+print('\n')
+print(rowContent(2, board))
