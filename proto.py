@@ -32,13 +32,17 @@ def dropTokenInColumn(token, column, board):
             return
 
 def drawBoard(board):
-    for row in board:
-        for cell in row:
+    for x in board:
+        print('||',end='')
+        for cell in x:
             if cell == 0:
-                print('  ', end='')
+                print(' ', end='')
             else:
-                print(' %s ' % cell, end='')
+                print(cell, end='')
+            print(' ', end='')
+        print('||',end='')
         print('')
+    print('++--------------++')
 
 def validSequence(sequence):
     for column in sequence:
@@ -54,7 +58,11 @@ if validSequence(sequence):
 else:
     print("Columns must be between 1 and 7") 
 
-print('\n')
+print()
+print('Column content: ')
+print()
 print(columnContent(2, board))
-print('\n')
+print()
+print('Row content: ')
+print()
 print(rowContent(2, board))
